@@ -4,13 +4,13 @@ class SeriesController < ApplicationController
   end
   
   def new
-    @series = Series.new
+    @serie = Series.new
   end
 
   def create
-    @series = Series.new(serie_params)
+    @serie = Series.new(serie_params)
     
-    if @series.save
+    if @serie.save
       redirect_to series_index_path
     else
       render :new
@@ -23,6 +23,6 @@ class SeriesController < ApplicationController
   private
 
   def serie_params
-    params.require(:serie).permit(:name, :synopsis, :director)
+    params.require(:series).permit(:name, :synopsis, :director)
   end
 end
