@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  get "documentaries/index"
+  get "documentaries/create"
+  get "documentaries/new"
+  get "series/index"
+  get "series/create"
+  get "series/new"
+  get "movies/index"
+  get "movies/create"
+  get "movies/new"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
