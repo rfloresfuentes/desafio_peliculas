@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+10.times do
+    Movie.create(name:Faker::Movie.title, synopsis:Faker::Movie.quote, director:Faker::Book.author)
+    Series.create(name:Faker::Movie.title, synopsis:Faker::Movie.quote, director:Faker::Book.author)
+    Documentary.create(name: Faker::Movie.title, synopsis:Faker::Movie.quote, director:Faker::Book.author)
+end
