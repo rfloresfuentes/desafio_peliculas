@@ -1,9 +1,19 @@
 <h1>Documentales Ingresados</h1>
+<div class="containter center">
+    <%= link_to "Agregar nuevo Documental", documentaries_new_path %>
+</div>
 
-<% @documentary.each do |p| %>
-    <h2><%= p.name %></h2>
-    <h4>Resumen: <%= p.synopsis %></h4>
-    <p>Director: <%= p.director %></p>
-<% end%>
-
- <%= link_to "Agregar nuevo Documental", documentaries_new_path %>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <% @documentaries.each do |p| %>
+        <div class="col">
+            <div class="card">
+                <%= image_tag  "#{p.url_img}" %>
+                <div class="card-body">
+                    <h5 class="card-title"><%= p.name %></h5>
+                    <p class="card-text">Resumen: <%= p.synopsis %></p>
+                    <p class="card-text"><small class="text-body-secondary">Director: <%= p.director %></small></p>
+                </div>
+            </div>
+        </div>
+    <% end%>
+</div>

@@ -8,7 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 10.times do
-    Movie.create(name:Faker::Movie.title, synopsis:Faker::Movie.quote, director:Faker::Book.author)
-    Series.create(name:Faker::Movie.title, synopsis:Faker::Movie.quote, director:Faker::Book.author)
-    Documentary.create(name: Faker::Movie.title, synopsis:Faker::Movie.quote, director:Faker::Book.author)
+    Movie.create(name:Faker::Movie.title, synopsis:Faker::Movie.quote, director:Faker::Book.author, url_img: Faker::Avatar.image(set:"set4"))
+    Novel.create(name:Faker::Movie.title, synopsis:Faker::Movie.quote, director:Faker::Book.author, url_img: Faker::Avatar.image(set:"set4"))
+    Documentary.create(name: Faker::Movie.title, synopsis:Faker::Movie.quote, director:Faker::Book.author, url_img: Faker::Avatar.image(set:"set4"))
 end

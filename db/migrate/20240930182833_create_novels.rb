@@ -1,6 +1,6 @@
-class CreateSeries < ActiveRecord::Migration[7.2]
+class CreateNovels < ActiveRecord::Migration[7.2]
   def change
-    create_table :series do |t|
+    create_table :novels do |t|
       t.string :name
       t.string :synopsis
       t.string :director

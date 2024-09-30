@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
+  get "novels/index"
+  get "novels/create"
+  get "novels/new"
   get "documentaries/index"
   get "documentaries/create"
   get "documentaries/new"
-  get "series/index"
-  get "series/create"
-  get "series/new"
   get "movies/index"
   get "movies/create"
   get "movies/new"
 
   post "movies", to:"movies#create"
-  post "series", to:"series#create"
+  post "series", to:"novels#create"
   post "documentaries", to:"documentaries#create"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
