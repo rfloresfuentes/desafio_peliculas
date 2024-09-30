@@ -23,6 +23,6 @@ class DocumentariesController < ApplicationController
   private
 
   def documentary_params
-    params.require(:documentary).permit(:name, :synopsis, :director)
+    params.require(:documentary).permit(:name, :synopsis, :director, :url_img)
   end
 end

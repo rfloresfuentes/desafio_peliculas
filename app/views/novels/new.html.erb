@@ -1,6 +1,6 @@
 <h1>Agregar Series</h1>
 <br><br><br>
-<%= form_with model: @novels, method: :post do |form| %>
+<%= form_with model: @novel, method: :post do |form| %>
         <div class="col-4">
                 <div>
                         <%= form.label :name, "Serie", class: "form-label" %>
@@ -14,7 +14,10 @@
                         <%= form.label :director, "Director", class: "form-label" %>
                         <%= form.text_field :director, class: "form-control" %>
                 </div>
-
+                <div>
+                        <%= form.label :url_img, "Ubicación Imagen", class: "form-label" %>
+                        <%= form.text_field :url_img, class: "form-control" %>
+                </div>
                 <div>
                         <%= form.submit "Crear", class: "btn btn-primary" %>
                 </div>
